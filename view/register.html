@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--可视区域的定义，如屏幕缩放等。告诉浏览器如何规范的渲染网页-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--ie和chrome中最佳的兼容模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--在webapp模式下，改变顶部状态条的颜色。-->
+		<meta name="Copyright" content="mlrc">
+		<!--版权所有-->
+		<meta name="format-detection" content="telephone=no">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/user.css"/>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/weixin/wxLogin.js" ></script>
+		<script>
+			if(!worf.user.getOpenId()){
+				wxLogin.goLogin("/view/register.html");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="regBox">
+			<div class="input-container">
+				<div class="input-box">
+					<span class="input-title">姓名</span>
+					<input type="text" class="text-input-01" id="username" onkeyup="this.value=this.value.replace(/[^\a-zA-Z\u4E00-\u9FA5]/g,'')"  onafterpaste = "this.value=this.value.replace(/[^\a-zA-Z\u4E00-\u9FA5]/g,'')" placeholder="请输入您的姓名" maxlength="20"/>
+				</div>
+				<div class="input-box">
+					<span class="input-title">手机号码</span>
+					<input type="text" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" class="text-input-01" id="mobile" placeholder="请输入您的手机号" />
+				</div>
+				<div class="input-box">
+					<span class="input-title">验证码</span>
+					<input type="text" class="text-input-02" id="smsCode" placeholder="请输入验证码" />
+					<span class="send-sms" id="sendRegisterCode">获取验证码</span>
+				</div>
+			</div>
+			<div class="btn-L" id="registerBtn">立即注册</div>
+		</div>
+		
+		
+		<div class="reg-success" id="regSuccessBox">
+			<div class="success-text">
+				<span>注册成功马上</span><a href="relateEqpt.html">绑定设备</a>
+			</div>
+		</div>
+		
+		
+		<script src="../js/myAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/user.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

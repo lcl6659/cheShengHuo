@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--可视区域的定义，如屏幕缩放等。告诉浏览器如何规范的渲染网页-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--ie和chrome中最佳的兼容模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--在webapp模式下，改变顶部状态条的颜色。-->
+		<meta name="Copyright" content="mlrc">
+		<!--版权所有-->
+		<meta name="format-detection" content="telephone=no">
+		<title>轨迹回放</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../js/lCalendar/lCalendar.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/playback.css"/>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/weixin/wxLogin.js" ></script>
+		<script>
+//			if(!worf.user.getSessionToken()){
+//				wxLogin.goLogin("/view/playBack.html");
+//			}
+		</script>
+	</head>
+	<body>
+		<div id="mapContainer"></div>
+		
+		<!--时间选择确定弹框-->
+		<div class="time-select-box" id="timeSelectBox">
+			<div class="select-back"></div>
+			<div class="date-box">
+				<div class="date-head">选择日期和时间段</div>
+				<div class="action-area">
+					<div class="time-box start-time-box" id="startTimeBox">
+						<span class="title">开始时间</span>
+						<div class="date-text"></div>
+						<span class="time-text"></span>
+						<input type="text" value="" readonly="readonly" id="startTime" />
+					</div>
+					<div class="time-box end-time-box" id="endTimeBox">
+						<span class="title">结束时间</span>
+						<div class="date-text"></div>
+						<span class="time-text"></span>
+						<input id="endTime" value="" type="text" readonly="readonly"/>
+					</div>
+					<span class="line-01"></span>
+					<span class="line-02"></span>
+					<div class="cancle-btn">取消</div>
+					<div class="ok-btn">确定</div>
+				</div>
+			</div>
+		</div>		
+		
+		<div class="action-box-03" id="actionBox">
+			<div class="action-head-03">
+				<div class="left-head">播放时段</div>
+				<div class="right-head">
+					<div class="time-box time-box-01">
+						<span class="title">开始：</span>
+						<input class="start-time" id="startTimeText" value="" type="text" readonly="readonly"/>
+					</div>
+					<div class="time-box">
+						<span class="title">结束：</span>
+						<input class="start-time" id="endTimeText" value="" type="text" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="procee-box">
+				<div class="play-mask" id="playMask"><!--播放遮罩（数据没加载完之前出现）--></div>
+				<div class="play-btn" id="playBtn"></div>
+				<div class="right-box">
+					<div class="one-process">
+						<span>播放速度</span>
+						<div class="procee-range">
+							<input type="range" id="playSpeed" value="4000" min="0" max="20000" step="100"/>
+						</div>
+					</div>
+					<div class="one-process">
+						<span>播放进度</span>
+						<div class="procee-range">
+							<input type="range" id="playProgress" value="0" min="0" max="100" step="0.1"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0EigWIH3mNqlXADmwMUfrTfLl7vaHiA8"></script>
+	  	<script type="text/javascript" src="../js/baiduMap/LuShu.js" ></script>
+		<script src="../js/myAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/lCalendar/lCalendar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/playback.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

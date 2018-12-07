@@ -1,0 +1,314 @@
+body {
+	background-color: #f4f5f9;
+}
+
+
+/*登录、注册*/
+
+.input-container {
+	width: 100%;
+	padding-left: 0.3rem;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #FFFFFF;
+	margin-top: 0.4rem;
+	margin-bottom: 0.6rem;
+}
+
+.input-container .input-box {
+	width: 100%;
+	height: 1.1rem;
+	border-bottom: 1px solid #E8EEF0;
+	font-size: 0.32rem;
+	color: #333;
+}
+
+.input-container .input-box:last-child {
+	border-bottom: 0px solid #E8EEF0;
+}
+
+.input-container .input-box .input-title {
+	display: inline-block;
+	line-height: 1.1rem;
+	width: 1.9rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.input-container .input-box .input-title-2 {
+	display: inline-block;
+	line-height: 1.1rem;
+	width: 2.5rem;
+	text-align: left;
+	vertical-align: top;
+	color: #999999;
+}
+
+.input-container .input-box .send-sms {
+	display: inline-block;
+	line-height: 1.1rem;
+	width: 1.95rem;
+	text-align: center;
+	vertical-align: top;
+	color: #4E7FFF;
+	position: relative;
+}
+
+.input-container .input-box .send-sms.sending {
+	color: #BABABA;
+}
+
+.input-container .input-box .send-sms:before {
+	content: "";
+	width: 2px;
+	height: 0.46rem;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto 0px;
+	background-color: #EBEBEB;
+}
+
+.input-container .input-box .text-input-01 {
+	height: 1.1rem;
+	width: 4.9rem;
+	border: none;
+	outline: none;
+	font-size: 0.32rem;
+}
+
+.input-container .input-box .text-input-02 {
+	height: 1.1rem;
+	width: 3rem;
+	border: none;
+	outline: none;
+	font-size: 0.32rem;
+}
+
+.input-container .input-box .text-input-03 {
+	height: 1.1rem;
+	width: 4.3rem;
+	border: none;
+	outline: none;
+	font-size: 0.32rem;
+}
+
+.input-container .input-box .text-input-04 {
+	height: 1.1rem;
+	width: 2.4rem;
+	border: none;
+	outline: none;
+	font-size: 0.32rem;
+}
+
+.btn-L {
+	width: 6.7rem;
+	height: 0.9rem;
+	margin: 0px auto;
+	border-radius: 0.45rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.9rem;
+	background-color: #D4D4D4;
+	font-size: 0.36rem;
+}
+.btn-L-02 {
+	display: block;
+	width: 6.7rem;
+	height: 0.9rem;
+	margin: 0px auto;
+	border-radius: 0.45rem;
+	color: #4e7fff;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.36rem;
+	border: 1px solid #4e7fff;
+	margin-top: 0.3rem;
+}
+
+.btn-L.active {
+	background-color: #4E7FFF;
+}
+
+.reg-success {
+	width: 100%;
+	height: 8rem;
+	background-image: url(../imgs/reg_success.png);
+	background-size: 26%;
+	background-position: center 3.6rem;
+	background-repeat: no-repeat;
+	padding-top: 6rem;
+	display: none;
+}
+
+.reg-success .success-text {
+	width: 100%;
+	text-align: center;
+	font-size: 0.36rem;
+	color: #262930;
+}
+
+.reg-success .success-text a {
+	width: 100%;
+	text-align: center;
+	font-size: 0.36rem;
+	color: #4E7FFF;
+}
+
+.scan-box {
+	width: 100%;
+	height: 2.7rem;
+	background-color: #22262F;
+	position: relative;
+	display: none;
+}
+.scan-box .scan-licenseNum{
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url(../imgs/sao-car.png);
+	background-repeat: no-repeat;
+	background-size: auto 0.9rem;
+	background-position: center top;
+	left: 1.14rem;
+	top:0.6rem;
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	padding-top: 1.15rem;
+}
+.scan-box .scan-imei{
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url(../imgs/sao-ma.png);
+	background-repeat: no-repeat;
+	background-size: auto 0.9rem;
+	background-position: center top;
+	right: 1.14rem;
+	top:0.6rem;
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	padding-top: 1.15rem;
+}
+
+
+.user-head-box{
+	height: 4.07rem;
+	width: 100%;
+	position: relative;
+	background-color: #22262F;
+}
+.user-head-box .head-img{
+	position: absolute;
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 50%;
+	left: 0px;
+	right: 0px;
+	top: 0.8rem;
+	margin: 0px auto;
+}
+.user-head-box .head-img img{
+	width: 100%;
+	height: 100%;
+}
+
+.user-head-box .user-name {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 0.36rem;
+	color: #F4F5F9;
+	top: 2.69rem;
+}
+.user-head-box .user-mobile {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 0.3rem;
+	color: #86909C;
+	top: 3.24rem;
+}
+
+.imei-list{
+	position: relative;
+	width: 100%;
+	overflow-y: auto;
+}
+.imei-list.no-data{
+	height:5rem;
+	background-image: url(../imgs/no-data.png);
+	background-repeat: no-repeat;
+	background-position: center 1.5rem;
+	background-size: 50%;
+}
+.imei-list.no-data:after{
+	content: "暂无数据";
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 5.5rem;
+	color: #86909C;
+	font-size: 0.35rem;
+}
+
+.imei-list .one-imei{
+	position: relative;
+	width: 100%;
+	height: 3.18rem;
+	background-color: #FFFFFF;
+	margin-top: 0.2rem;
+	border-top:1px solid #D9E1E8;
+	border-bottom:1px solid #D9E1E8;
+	box-sizing: border-box;
+	padding-left: 0.3rem;
+}
+
+.imei-list .one-imei .imei-head{
+	height: 1rem;
+	line-height: 1rem;
+	width: 100%;
+	border-bottom: 1px solid #D9E1E8;
+	color: #333333;
+}
+.imei-list .one-imei .imei-head .imei-index{
+	display: inline-block;
+	height: 0.4rem;
+	width: 0.4rem;
+	border-radius: 50%;
+	background-color: #4E7FFF;
+	text-align: center;
+	line-height: 0.4rem;
+	font-size: 0.3rem;
+	color: #fff;
+}
+.imei-list .one-imei .imei-head .title{
+	font-size: 0.32rem;
+	margin-left: 0.2rem;
+}
+.imei-list .one-imei .imei-head .imei-number{
+	font-size: 0.3rem;
+}
+.imei-list .one-imei .imei-content{
+	position: relative;
+	width: 100%;
+	height: 2.16rem;
+	font-size: 0.28rem;
+	padding-top: 0.15rem;
+}
+.imei-list .one-imei .imei-content .title{
+	color: #999999;
+}
+.imei-list .one-imei .imei-content .content-01{
+	height: 0.6rem;
+	line-height: 0.6rem;
+	width: 3.6rem;
+	float: left;
+}
+.imei-list .one-imei .imei-content .content-02{
+	height: 0.6rem;
+	line-height: 0.6rem;
+	width: 3.2rem;
+	float: right;
+}

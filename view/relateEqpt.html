@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--可视区域的定义，如屏幕缩放等。告诉浏览器如何规范的渲染网页-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--ie和chrome中最佳的兼容模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--在webapp模式下，改变顶部状态条的颜色。-->
+		<meta name="Copyright" content="mlrc">
+		<!--版权所有-->
+		<meta name="format-detection" content="telephone=no">
+		<title>设备绑定</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/user.css"/>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/weixin/wxLogin.js" ></script>
+		<script>
+			if(!worf.user.getSessionToken()){
+				wxLogin.goLogin("/view/relateEqpt.html");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="scan-box">
+			<div class="scan-licenseNum" id="scanLicenseNum"><span>扫描车牌号</span></div>
+			<div class="scan-imei" id="scanImei"><span>扫描设备号</span></div>
+		</div>
+		<div class="input-container">
+			<div class="input-box">
+				<span class="input-title-2">车牌号</span>
+				<input type="text" class="text-input-03" id="licenseNum" maxlength="8" onkeyup="this.value=this.value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')"  onafterpaste = "this.value=this.value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" max="9" placeholder="请输入车牌号" />
+			</div>
+			<div class="input-box">
+				<span class="input-title-2">设备号</span>
+				<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" class="text-input-03" id="imei" maxlength="20" placeholder="请输入设备号" />
+			</div>
+			<div class="input-box">
+				<span class="input-title-2">手机号</span>
+				<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" class="text-input-03" id="mobile" maxlength="11" placeholder="请输入手机号" />
+			</div>
+			<div class="input-box">
+				<span class="input-title-2">验证码</span>
+				<input type="text" class="text-input-04" id="smsCode" placeholder="请输入验证码" />
+				<span class="send-sms" id="sendRelateSmsCode">获取验证码</span>
+			</div>
+		</div>
+		<div class="btn-L" id="relateBtn">立即绑定</div>
+		
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/weixin/wxSignature.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/myAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/user.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			wxSignature.init();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--可视区域的定义，如屏幕缩放等。告诉浏览器如何规范的渲染网页-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--ie和chrome中最佳的兼容模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--在webapp模式下，改变顶部状态条的颜色。-->
+		<meta name="Copyright" content="mlrc">
+		<!--版权所有-->
+		<meta name="format-detection" content="telephone=no">
+		<title>实时监控</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/playback.css"/>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/weixin/wxLogin.js" ></script>
+		<script>
+//			if(!worf.user.getSessionToken()){
+//				wxLogin.goLogin("/view/monitor.html");
+//			}
+		</script>
+	</head>
+	<body>
+		<div id="mapContainer"></div>
+		
+		<div class="count-down-box">
+			<span class="count-down" id="countDown">10</span>秒后刷新
+		</div>
+		
+		<div class="action-box-2" id="actionBox">
+			<div class="action-head">
+				<span class="licenseNum"></span>
+				<span class="power-num"></span>
+				<span class="close-box" id="close"></span>
+			</div>
+			<div class="msg-box">
+				<span>当前状态：</span>
+				<span class="state"></span>
+			</div>
+			<div class="msg-box" id="stopTimeBox">
+				<span>停车时长：</span>
+				<span class="stop-time"></span>
+			</div>
+			<div class="msg-box">
+				<span class="stop-position"></span>
+			</div>
+		</div>
+		
+		<div class="model-back" id="modelBack"></div>
+		<div class="select-equipment" id="selectEquipment">
+			<div class="s-head">
+				请选择该车设备
+				<span class="cancle-btn">取消</span>
+				<span class="ok-btn">确定</span>
+			</div>
+			<div class="eq-box" id="eqBox">
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0EigWIH3mNqlXADmwMUfrTfLl7vaHiA8"></script>
+		<script src="../js/myAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/myMapControl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/monitor.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

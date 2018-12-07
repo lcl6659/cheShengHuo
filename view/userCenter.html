@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--可视区域的定义，如屏幕缩放等。告诉浏览器如何规范的渲染网页-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--ie和chrome中最佳的兼容模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--启用 webapp 模式, 会隐藏工具栏和菜单栏，和其它配合使用。-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--在webapp模式下，改变顶部状态条的颜色。-->
+		<meta name="Copyright" content="mlrc">
+		<!--版权所有-->
+		<meta name="format-detection" content="telephone=no">
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/user.css"/>
+		<script type="text/javascript" src="../js/base.js" ></script>
+		<script type="text/javascript" src="../js/weixin/wxLogin.js" ></script>
+		<script>
+			if(!worf.user.getSessionToken()){
+				wxLogin.goLogin("/view/userCenter.html");
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="user-head-box" id="headBox">
+			<div class="head-img">
+				<img src="../imgs/defalt_head.png" />
+			</div>
+			<span class="user-name" id="userName"></span>
+			<span class="user-mobile" id="userMobile"></span>
+		</div>
+		
+		<div class="imei-list" id="imeiList">
+			
+		</div>
+		
+		<div id="cloneBox" style="display: none;">
+			<div class="one-imei">
+				<div class="imei-head">
+					<span class="imei-index">1</span>
+					<span class="title">设备号：</span>
+					<span class="imei-number"></span>
+				</div>
+				<div class="imei-content">
+					<div class="content-01">
+						<span class="title">绑定时间：</span>
+						<span class="content-value relate-time"></span>
+					</div>
+					<div class="content-02">
+						<span class="title">型号：</span>
+						<span class="content-value type"></span>
+					</div>
+					<div class="content-01">
+						<span class="title">服务到期：</span>
+						<span class="content-value end-time"></span>
+					</div>
+					<div class="content-02">
+						<span class="title">当前状态：</span>
+						<span class="content-value state"></span>
+					</div>
+					<div class="content-01">
+						<span class="title">车牌号码：</span>
+						<span class="content-value licenseNum"></span>
+					</div>
+					<div class="content-02">
+						<span class="title">设备电量：</span>
+						<span class="content-value power"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/myAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/userCenter.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

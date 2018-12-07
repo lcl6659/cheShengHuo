@@ -1,0 +1,652 @@
+#mapContainer {
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
+
+.action-box {
+	position: fixed;
+	width: 100%;
+	height: 2.06rem;
+	background-color: #22262F;
+	left: 0px;
+	bottom: 0px;
+}
+
+.action-box .title {
+	color: #8891A0;
+	font-size: 0.28rem;
+	padding: 0.27rem 0.3rem;
+}
+
+.action-box .car-list {
+	position: relative;
+	width: 100%;
+}
+
+.action-box .car-list .one-car {
+	display: inline-block;
+	vertical-align: top;
+	width: 2.15rem;
+	height: 0.7rem;
+	text-align: center;
+	line-height: 0.7rem;
+	font-size: 0.28rem;
+	color: #4E7FFF;
+	border: 1px solid #4E7FFF;
+	margin-left: 0.20rem;
+}
+
+.action-box-2 {
+	position: fixed;
+	width: 100%;
+	height: 2.75rem;
+	background-color: #22262F;
+	left: 0px;
+	bottom: -2.75rem;
+	box-sizing: border-box;
+	padding-left: 0.3rem;
+	color: #87929f;
+	font-size: 0.28rem;
+	transition: all 0.5s ease;
+}
+
+.action-box-2 .action-head {
+	width: 100%;
+	height: 0.85rem;
+	position: relative;
+	line-height: 0.85rem;
+	margin-bottom: 0.1rem;
+}
+
+.action-box-2 .action-head:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	background-image: url(../imgs/line01.png);
+	background-repeat: repeat-x;
+	background-size: auto;
+	background-position: center;
+}
+
+.action-box-2 .action-head .licenseNum {
+	padding-left: 0.45rem;
+	background-image: url(../imgs/icon_car.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 0.28rem;
+}
+
+.action-box-2 .action-head .power-num {
+	padding-right: 0.65rem;
+	background-image: url(../imgs/icon_dianliang.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: auto 0.28rem;
+	position: absolute;
+	right: 0.7rem;
+}
+
+.action-box-2 .action-head .close-box {
+	background-image: url(../imgs/icon_close.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 0.28rem;
+	position: absolute;
+	right: 0rem;
+	width: 0.7rem;
+	height: 0.85rem;
+}
+
+.action-box-2 .msg-box {
+	height: 0.55rem;
+	line-height: 0.55rem;
+	width: 100%;
+}
+
+.action-box-2 .msg-box .stop-position {
+	padding-left: 0.35rem;
+	background-image: url(../imgs/icon_map.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 0.28rem;
+}
+
+.count-down-box {
+	width: 2.09rem;
+	height: 0.7rem;
+	background-color: #fff;
+	position: fixed;
+	top: 0.3rem;
+	left: 0.3rem;
+	z-index: 50;
+	border-radius: 0.05rem;
+	box-shadow: 0px 0px 10px #CCCCCC;
+	font-size: 0.3rem;
+	color: #333333;
+	text-align: center;
+	line-height: 0.7rem;
+}
+
+.count-down-box .count-down {
+	color: #4E7FFF;
+}
+
+.model-back {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.5;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	display: none;
+}
+
+.select-equipment {
+	position: fixed;
+	width: 100%;
+	height: 4.03rem;
+	bottom: -4.03rem;
+	background-color: #fff;
+	left: 0px;
+	z-index: 200;
+	transition: all 0.5s ease;
+}
+
+.select-equipment .s-head {
+	width: 100%;
+	height: 0.9rem;
+	background-color: #262930;
+	line-height: 0.9rem;
+	font-size: 0.34rem;
+	color: #fff;
+	text-align: center;
+	position: relative;
+}
+
+.select-equipment .s-head .cancle-btn {
+	width: 1.3rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-size: 0.30rem;
+	color: #8891A0;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+}
+
+.select-equipment .s-head .ok-btn {
+	width: 1.3rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-size: 0.30rem;
+	color: #8891A0;
+	text-align: center;
+	position: absolute;
+	right: 0px;
+}
+
+.select-equipment .eq-box {
+	width: 100%;
+	height: 3.13rem;
+	font-size: 0.34rem;
+	color: #BDBDBD;
+	text-align: center;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.select-equipment .eq-box .one-eq {
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+}
+
+.select-equipment .eq-box .one-eq.select {
+	color: #333333;
+	border-top: 1px solid #D9E1E8;
+	border-bottom: 1px solid #D9E1E8;
+	font-weight: 900;
+}
+
+.action-box-03 {
+	position: fixed;
+	width: 100%;
+	height: 2.87rem;
+	background-color: #22262F;
+	left: 0px;
+	bottom: 0px;
+	box-sizing: border-box;
+	padding-left: 0.3rem;
+	color: #87929f;
+	font-size: 0.28rem;
+}
+
+.action-box-03 .action-head-03 {
+	position: relative;
+	height: 1.3rem;
+	width: 100%;
+}
+
+.action-box-03 .action-head-03:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	background-image: url(../imgs/line01.png);
+	background-repeat: repeat-x;
+	background-size: auto;
+	background-position: center;
+}
+
+.action-box-03 .action-head-03 .left-head {
+	height: 1.3rem;
+	line-height: 1.3rem;
+	width: 1.4rem;
+	float: left;
+	position: relative;
+}
+
+.action-box-03 .action-head-03 .left-head:after {
+	content: "";
+	width: 2px;
+	height: 1.3rem;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image: url(../imgs/line02.png);
+	background-repeat: repeat-y;
+	background-size: auto;
+	background-position: center;
+}
+
+.action-box-03 .action-head-03 .right-head {
+	width: 5.8rem;
+	height: 1.3rem;
+	float: right;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 0.14rem;
+}
+
+.action-box-03 .action-head-03 .right-head:after {
+	content: "";
+	position: absolute;
+	width: 0.19rem;
+	height: 0.33rem;
+	background-image: url(../imgs/right.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	right: 0.3rem;
+	top: 0.5rem;
+}
+
+.action-box-03 .action-head-03 .right-head .time-box {
+	width: 100%;
+	position: relative;
+	height: 0.50rem;
+	line-height: 0.50rem;
+	box-sizing: border-box;
+	padding-left: 0.3rem;
+}
+
+
+/*.action-box-03 .action-head-03 .right-head .time-box.time-box-01:after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	height: 2px;
+	bottom: -1px;
+	left: 0px;
+	background-image: url(../imgs/line01.png);
+	background-repeat: repeat-x;
+	background-size: auto;
+	background-position: center;
+}*/
+
+.action-box-03 .action-head-03 .right-head .time-box input {
+	color: #87929f;
+	font-size: 0.28rem;
+}
+
+.action-box-03 .procee-box {
+	width: 100%;
+	position: relative;
+}
+
+.action-box-03 .procee-box .play-mask {
+	width: 100%;
+	height: 1.57rem;
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+	top: 0px;
+}
+
+.action-box-03 .procee-box .play-btn {
+	height: 1.57rem;
+	width: 1.4rem;
+	float: left;
+	position: relative;
+	background-image: url(../imgs/btn_play_normal.png);
+	background-repeat: no-repeat;
+	background-position: left 0.2rem;
+	background-size: 1.12rem auto;
+	z-index: 50;
+}
+
+.action-box-03 .procee-box .play-btn:hover {
+	background-image: url(../imgs/btn_play_pressed.png);
+}
+
+.action-box-03 .procee-box .play-btn.playing {
+	background-image: url(../imgs/btn_suspend_normal.png);
+}
+
+.action-box-03 .procee-box .play-btn.playing:hover {
+	background-image: url(../imgs/btn_suspend_pressed.png);
+}
+
+.action-box-03 .right-box {
+	width: 5.5rem;
+	height: 1.57rem;
+	position: relative;
+	float: right;
+	box-sizing: border-box;
+	padding-top: 0.1rem;
+	z-index: 50;
+}
+
+.action-box-03 .right-box .one-process {
+	width: 100%;
+	height: 0.55rem;
+	line-height: 0.55rem;
+	position: relative;
+	margin-top: 0.1rem;
+}
+
+.action-box-03 .right-box .one-process .procee-range {
+	width: 3.8rem;
+	position: absolute;
+	top: 0.01rem;
+	left: 1.4rem;
+}
+
+
+/*去除系统默认的样式*/
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 3.8rem;
+	border-radius: 0px;
+	/*这个属性设置使填充进度条时的图形为圆角*/
+	background: -webkit-linear-gradient(#4e7fff, #4e7fff);
+	background: -moz-linear-gradient(#4e7fff, #4e7fff);
+	background: -o-linear-gradient(#4e7fff, #4e7fff);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#4e7fff), to(#4e7fff));
+	background: linear-gradient(#4e7fff, #4e7fff) no-repeat;
+	background-size: 0% 100%;
+	background-color: #101316;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+
+/*给滑动轨道(track)添加样式*/
+
+input[type=range]::-webkit-slider-runnable-track {
+	height: 0.24rem;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+
+/*给滑块(thumb)添加样式*/
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 0.46rem;
+	width: 0.46rem;
+	border-radius: 50%;
+	margin-top: -0.1rem;
+	/*使滑块超出轨道部分的偏移量相等*/
+	background-image: url(../imgs/icon_speed_pressed.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.InfoWindowHtml {
+	background-color: #fff;
+	min-height: 1rem;
+	width: 5.82rem;
+	border-radius: 10px;
+	font-size: 0.28rem;
+	box-sizing: border-box;
+	padding: 0 0.3rem;
+	color: #8891a0;
+	position: relative;
+	padding-bottom: 0.2rem;
+}
+
+.InfoWindowHtml:after {
+	content: "";
+	position: absolute;
+	width: 0.3rem;
+	height: 0.3rem;
+	background-image: url(../imgs/down-arrow-2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	bottom: -0.24rem;
+	left: 2.7rem;
+}
+
+.InfoWindowHtml .head-box {
+	width: 100%;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background-image: url(../imgs/icon_car.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 0.31rem;
+	padding-left: 0.44rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #e8eef0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.InfoWindowHtml .stop-time-box {
+	width: 100%;
+	height: 0.46rem;
+	line-height: 0.46rem;
+	margin-top: 0.12rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.InfoWindowHtml .stop-place {
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background-image: url(../imgs/icon_map.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 0.30rem;
+	padding-left: 0.35rem;
+	box-sizing: border-box;
+}
+
+.InfoWindowHtml .stop-place-2 {
+	width: 100%;
+	line-height: 0.4rem;
+	margin-top: 0.2rem;
+	background-image: url(../imgs/icon_map.png);
+	background-repeat: no-repeat;
+	background-position: left 0.06rem;
+	background-size: auto 0.30rem;
+	padding-left: 0.35rem;
+	box-sizing: border-box;
+}
+
+.time-select-box {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.time-select-box .select-back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 40;
+	background-color: #000000;
+	opacity: 0.6;
+}
+
+.time-select-box .date-box {
+	width: 6.91rem;
+	height: 5.35rem;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	top: 2.2rem;
+	background-color: #fff;
+	border-radius: 0.08rem;
+	z-index: 100;
+}
+
+.time-select-box .date-box .date-head {
+	width: 100%;
+	border-bottom: 1px solid #D9E1E8;
+	height: 0.9rem;
+	font-size: 0.34rem;
+	color: #333;
+	text-align: center;
+	line-height: 0.9rem;
+}
+
+.time-select-box .date-box .action-area {
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.time-select-box .date-box .time-box {
+	width: 3.15rem;
+	height: 2.3rem;
+	position: absolute;
+	top: 0px;
+	box-sizing: border-box;
+	padding: 0.3rem 0;
+}
+
+.time-select-box .date-box .time-box .title {
+	color: #999999;
+	font-size: 0.28rem;
+	padding-left: 0.57rem;
+	background-image: url(../imgs/date.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 0.28rem;
+}
+
+.time-select-box .date-box .time-box .date-text {
+	color: #333333;
+	font-size: 0.36rem;
+	line-height: 0.8rem;
+	font-weight: 600;
+}
+
+.time-select-box .date-box .time-box .time-text {
+	color: #333333;
+	font-size: 0.3rem;
+}
+
+.time-select-box .date-box .time-box input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+
+.time-select-box .date-box .time-box.start-time-box {
+	text-align: left;
+	left: 0.3rem;
+}
+
+.time-select-box .date-box .time-box.end-time-box {
+	text-align: right;
+	right: 0.3rem;
+}
+
+.time-select-box .date-box .action-area .line-01 {
+	position: absolute;
+	width: 1px;
+	height: 1.73rem;
+	background-color: #D9E1E8;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	top: 0.3rem;
+}
+
+.time-select-box .date-box .action-area .line-02 {
+	position: absolute;
+	width: 6.3rem;
+	height: 1px;
+	background-color: #D9E1E8;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	top: 2.3rem;
+}
+
+.time-select-box .date-box .action-area .cancle-btn {
+	position: absolute;
+	width: 3rem;
+	height: 0.9rem;
+	background-color: #F3F3F3;
+	left: 0.3rem;
+	top: 2.93rem;
+	text-align: center;
+	line-height: 0.9rem;
+	border-radius: 0.08rem;
+	font-size: 0.38rem;
+	color: #909090;
+}
+
+.time-select-box .date-box .action-area .ok-btn {
+	position: absolute;
+	width: 3rem;
+	height: 0.9rem;
+	background-color: #262930;
+	right: 0.3rem;
+	top: 2.93rem;
+	text-align: center;
+	line-height: 0.9rem;
+	border-radius: 0.08rem;
+	font-size: 0.38rem;
+	color: #FFFFFF;
+}
